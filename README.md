@@ -9,8 +9,8 @@ Frontend functionally confirmed with localhost.\
 
 *** Assignments ***
 
-12.21   - Container has images running inside. CRUD works.
-12.22   - Container has debug-, proxy-, backend- ja frontend-containers running inside it. CRUD works.
+12.21   - Container has images running inside. CRUD works.\
+12.22   - Container has debug-, proxy-, backend- ja frontend-containers running inside it. CRUD works.\
 
 *** Docker run commands for DEVELOPMENT: ***
 
