@@ -3,11 +3,9 @@ Docker porject for HYO part 12
 
 *** Project ***
 
-This project is for HYO fullstack course part 12 exercises 21 and 22. It uses a previous project from the course as its base.
-
-Backend functionality confirmed with postman before starting.
-
-Frontend functionally confirmed with localhost.
+This project is for HYO fullstack course part 12 exercises 21 and 22. It uses a previous project from the course as its base.\
+Backend functionality confirmed with postman before starting.\
+Frontend functionally confirmed with localhost.\
 
 *** Assignments ***
 
@@ -25,8 +23,7 @@ Container:
 
 1. docker compose -f docker-compose.dev.yml up
 
-Address:
-
+Address:\
 localhost:5173
 
 *** Docker run commands for PRODUCTION: ***
@@ -40,16 +37,15 @@ Container:
 
 1. docker compose -f docker-compose.yml up
 
-Address:
-
+Address:\
 localhots:8080/
 
 *** Local run commands ***
 
-backend development:    npm run dev
-backend production:     npm run start
-backend build:          npm run build:ui
+backend development:    npm run dev\
+backend production:     npm run start\
+backend build:          npm run build:ui\
 
-frontend development:   npm run dev
-frontend production:    npm run start
-frontend build:         npm run build:ui
+frontend development:   npm run dev\
+frontend production:    npm run start\
+frontend build:         npm run build:ui\
