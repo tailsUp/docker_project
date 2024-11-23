@@ -1,0 +1,36 @@
+services:
+  frontend:
+    image: image-frontend-development-oma:latest
+    volumes:
+    - ./frontend/:/usr/src/app
+    container_name: container-frontend-development-oma
+    environment: 
+           REACT_ENVIRONMENT: "development"
+    depends_on:
+      - backend
+    ports:
+      - 5173:5173
+  backend:
+    image: image-backend-development-oma:latest
+    volumes:
+      - ./backend/:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: container-backend-development-oma
+    ports:
+      - 3001:3001
+    environment:
+      - PORT=3001
+      - MONGO_URL=mongodb+srv://fullstack:fullstack@blogcluster.ms7mcby.mongodb.net/
+      - MONGO_URI=mongodb+srv://fullstack:fullstack@blogcluster.ms7mcby.mongodb.net/
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: container-reverse-proxy-develop
+    depends_on:
+      - frontend
+      - backend
+  debug-helper:
+    image: busybox
